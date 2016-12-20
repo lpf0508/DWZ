@@ -22,6 +22,7 @@ namespace WebApplication2.Controllers
         };
 
         // GET api/Users
+        //[CrossSite]
         public IEnumerable<Users> Get()
         {
             return _userList;
@@ -52,12 +53,13 @@ namespace WebApplication2.Controllers
         //    UsersClass uc = new UsersClass();
 
         //    var obj1 = uc.GetAll();
-            
+
 
         //    return new ResultMessage() { State=0,Msg = "正常" };
         //}
 
         [HttpPost]
+        //public List<Users> Add([FromBody]Users obj)
         public List<Users> Add(dynamic obj)
         {
             System.Web.HttpRuntime.Cache.Insert("1", 2, null, DateTime.Now.AddDays(1), TimeSpan.Zero);
@@ -72,11 +74,12 @@ namespace WebApplication2.Controllers
 
             return uc.GetUsersByPagnation(2, 5);  //uc.GetAll();
         }
-        
+
 
     }
 
-    public class ResultMessage{
+    public class ResultMessage
+    {
         public int State { get; set; }
 
         public string Msg { get; set; }

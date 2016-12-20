@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{680C9E
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxWebApplication3", "WebApplication3\AjaxWebApplication3.csproj", "{F39247A2-349D-4D7F-BCA2-B6D27B34EB61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{6E0D3C7D-FB5E-444D-8220-069B2F5B1D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E0D3C7D-FB5E-444D-8220-069B2F5B1D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E0D3C7D-FB5E-444D-8220-069B2F5B1D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F39247A2-349D-4D7F-BCA2-B6D27B34EB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39247A2-349D-4D7F-BCA2-B6D27B34EB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39247A2-349D-4D7F-BCA2-B6D27B34EB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39247A2-349D-4D7F-BCA2-B6D27B34EB61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

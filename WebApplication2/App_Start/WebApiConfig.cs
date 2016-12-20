@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
+
 
 namespace WebApplication2
 {
@@ -11,7 +13,12 @@ namespace WebApplication2
         {
             // Web API 配置和服务
             //config.SetCorsPolicyProviderFactory(new CorsPolicyFactory());
-            //config.EnableCors();
+
+            string origins = "*";
+            string headers = "*";
+            string methods = "*";
+            config.EnableCors(new EnableCorsAttribute(origins, headers, methods));
+            
 
             // Web API 路由
             config.MapHttpAttributeRoutes();

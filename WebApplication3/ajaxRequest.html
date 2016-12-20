@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        jQuery.support.cors = true;
+        $(document).ready(function () {
+
+            var url = "http://10.10.12.151:8081/api/users/";
+
+            //$.ajax({
+            //    type: 'GET',
+            //    url: url+'Get',
+            //    dada: {},
+            //    success: function (msg) {
+            //        debugger
+            //    },
+            //    error: function (msg) {
+            //        debugger
+            //    }
+            //});
+
+            var data = { "UserName": "111", "Age": "18" };
+
+            $.ajax({
+                type: 'POST',
+                url: url + 'Add',
+                data: JSON.stringify(data),//传递json对象时必须要加
+                dataType: 'json',
+                contentType:"application/json; charset=utf-8",
+                success: function (msg) {
+                    debugger
+                },
+                error: function (msg) {
+                    debugger
+                }
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
