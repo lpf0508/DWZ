@@ -1,0 +1,56 @@
+﻿<div layouth="120">
+    <table class="list" width="98%">
+        <thead>
+            <tr>
+                <th colspan="2">客户信息</th>
+                <th colspan="2">基本信息</th>
+                <th colspan="3">资料信息</th>
+            </tr>
+            <tr>
+                <th width="80">客户号</th>
+                <th width="100">客户名称</th>
+                <th width="100">客户划分</th>
+                <th>证件号码</th>
+                <th align="right" width="100">信用等级</th>
+                <th width="100">企业性质</th>
+                <th width="100">建档日期</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>iso127309</td>
+                <td>北京市政府咿呀哟</td>
+                <td>政府单位</td>
+                <td>0-0001027766351528</td>
+                <td>四等级</td>
+                <td>政府单位</td>
+                <td>2009-05-21</td>
+            </tr>
+            <tr>
+                <td>iso127310</td>
+                <td>北京市政府咿呀哟</td>
+                <td>政府单位</td>
+                <td>0-0001027766351528</td>
+                <td>四等级</td>
+                <td>政府单位</td>
+                <td>2009-05-21</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+<input name="xxx" alt="请输入客户名称" /> 
+
+<label><input type="checkbox" name="c1" value="1" />选择1</label>
+<label><input type="checkbox" name="c1" value="2" />选择2</label>
+<label><input type="checkbox" name="c1" value="3" />选择3</label>
+<input type="checkbox" class="checkboxCtrl" group="c1" />全选
+
+<select class="combox" name="city" id="combox_city" ref="combox_area" refUrl="json1.json">
+    <option value="all">所有城市</option>
+</select>
+
+<input type="date" format="yyyy-MM-dd HH:mm:ss" name="items.itemDataTime"
+    size="16"/>日期时间

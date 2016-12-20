@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    
+    <link href="../dwz_jui-master/themes/default/style.css" rel="stylesheet" />
+    <link href="../dwz_jui-master/themes/css/core.css" rel="stylesheet" />
+
+
+    <script src="../dwz_jui-master/js/jquery-2.1.4.js"></script>
+    <script src="../dwz_jui-master/js/jquery.bgiframe.js"></script>
+    <script src="../dwz_jui-master/js/dwz.core.js"></script>
+    <script src="../dwz_jui-master/js/dwz.ui.js"></script>
+    <script src="../dwz_jui-master/js/dwz.alertMsg.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            DWZ.init("dwz.frag.xml", {
+                loginUrl: "login_dialog.html", loginTitle: "登录",	// 弹出登录对话框
+                //		loginUrl:"login.html",	// 跳到登录页面
+                statusCode: { ok: 200, error: 300, timeout: 301 }, //【可选】
+                pageInfo: { pageNum: "pageNum", numPerPage: "numPerPage", orderField: "orderField", orderDirection: "orderDirection" }, //【可选】
+                keys: { statusCode: "statusCode", message: "message" }, //【可选】
+                ui: { hideMode: 'offsets' }, //【可选】hideMode:navTab组件切换的隐藏方式，支持的值有’display’，’offsets’负数偏移位置的值，默认值为’display’
+                debug: false,	// 调试模式 【true|false】
+                callback: function () {
+                    initEnv();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="layout">
+        <div id="header">11</div>
+        <div id="leftside"><button onclick="alertMsg.info('1111')">AAA</button></div>
+        <div id="container">33</div>
+    </div>
+</body>
+</html>

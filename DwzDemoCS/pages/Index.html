@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../dwz_jui-master/themes/default/style.css" rel="stylesheet" />
+    <link href="../dwz_jui-master/themes/css/core.css" rel="stylesheet" />
+
+    <script src="../dwz_jui-master/js/jquery-2.1.4.min.js"></script>
+    <!--<script src="../dwz_jui-master/bin/dwz.min.js"></script>-->
+    <script src="../dwz_jui-master/js/jquery.bgiframe.js"></script>
+    <script src="../dwz_jui-master/js/dwz.core.js"></script>
+    <script src="../dwz_jui-master/js/dwz.ui.js"></script>
+    <script src="../dwz_jui-master/js/dwz.ajax.js"></script>
+
+    <script src="../dwz_jui-master/js/dwz.tree.js"></script>
+    <script src="../dwz_jui-master/js/dwz.accordion.js"></script>
+    <script src="../dwz_jui-master/js/dwz.contextmenu.js"></script>
+    <script src="../dwz_jui-master/js/dwz.navTab.js"></script>
+    <script src="../dwz_jui-master/js/dwz.tab.js"></script>
+    <script src="../dwz_jui-master/js/dwz.stable.js"></script>
+    <script src="../dwz_jui-master/js/dwz.pagination.js"></script>
+    <script src="../dwz_jui-master/js/dwz.checkbox.js"></script>
+    <script src="../dwz_jui-master/js/dwz.combox.js"></script>
+    <script src="../dwz_jui-master/js/dwz.util.date.js"></script>
+    <script src="../dwz_jui-master/js/dwz.panel.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            DWZ.init("../dwz_jui-master/dwz.frag.xml", {
+                loginUrl: "login_dialog.html", loginTitle: "登录",	// 弹出登录对话框
+                //		loginUrl:"login.html",	// 跳到登录页面
+                statusCode: { ok: 200, error: 300, timeout: 301 }, //【可选】
+                pageInfo: { pageNum: "pageNum", numPerPage: "numPerPage", orderField: "orderField", orderDirection: "orderDirection" }, //【可选】
+                keys: { statusCode: "statusCode", message: "message" }, //【可选】
+                ui: { hideMode: 'offsets' }, //【可选】hideMode:navTab组件切换的隐藏方式，支持的值有’display’，’offsets’负数偏移位置的值，默认值为’display’
+                debug: false,	// 调试模式 【true|false】
+                callback: function () {
+                    initEnv();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#" target="dialog" title="确定要删除吗?">删除</a>
+    <div id="layout">
+        <div id="header">logo</div>
+        <div id="leftside">
+            <div id="sidebar">
+                <div class="toggleCollapse"><h2>主菜单</h2><div>收缩</div></div>
+                <div class="accordion" fillspace="sidebar">
+
+                    <div class="accordionHeader">
+                        <h2><span>Folder</span>界面组件1</h2>
+                    </div>
+                    <div class="accordionContent">
+                        <ul class="tree treeFolder">
+                            <li>
+                                <a href="http://www.baidu.com" target="navTab" rel="index">AAAA</a>
+                                <ul>
+                                    <li><a href="page1.html" target="navTab" rel="page1">A11</a></li>
+                                    <li><a href="tabs.html" target="navTab" rel="tabs">tabs</a></li>
+                                    <li><a href="accordion.html" target="navTab" rel="accordion">accordion</a></li>
+                                    <li><a href="table.html" target="navTab" rel="table">table</a></li>
+                                    <li><a href="panel.html" target="navTab" rel="panel" minH="200" defW="300">panel</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>BBBB</a>
+                                <ul>
+                                    <li><a>B11</a></li>
+                                    <li><a>B22</a></li>
+                                    <li><a>B33</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="accordionHeader">
+                        <h2><span>Folder</span>界面组件2</h2>
+                    </div>
+                    <div class="accordionContent">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div id="container">
+            <div id="navTab" class="tabsPage">
+                <div class="tabsPageHeader">
+                    <div class="tabsPageHeaderContent">
+                        <!-- 显示左右控制时添加 class="tabsPageHeaderMargin" -->
+                        <ul class="navTab-tab">
+                            <li tabid="main" class="main"><a href="javascript:;"><span><span class="home_icon">我的主页</span></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="tabsLeft">left</div><!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->
+                    <div class="tabsRight">right</div><!-- 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" -->
+                    <div class="tabsMore">more</div>
+                </div>
+                <ul class="tabsMoreList">
+                    <li><a href="javascript:;">我的主页</a></li>
+                </ul>
+                <div class="navTab-panel tabsPageContent layoutBox">
+                    <div class="page unitBox">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
