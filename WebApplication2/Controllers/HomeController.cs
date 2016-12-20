@@ -11,7 +11,7 @@ namespace WebApplication2.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            string temp = "123";
             return View();
         }
     }
