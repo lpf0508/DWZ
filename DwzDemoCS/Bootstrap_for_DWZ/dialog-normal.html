@@ -1,0 +1,36 @@
+<div class="pageContent">
+    <form action="ajaxDone1.html" id="j_custom_form" class="pageForm form-validate" method="post" callback="dialogAjaxDone" noEnter>
+        <input type="hidden" name="custom.id" value="edce142bc2ed4ec6b623aacaf602a4de">
+        <div class="pageFormContent" layouth="29">
+            <table class="table table-condensed table-hover" width="100%">
+                <tbody>
+                    <tr>
+                        <td colspan="4" align="center"><h3>* 我是一个弹出窗口</h3></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="j_custom_cate" class="control-label x85">客户类型：</label>
+                            <select name="custom.type" id="j_custom_cate" class="selectpicker show-tick validate[required]" data-style="btn-default btn-sel" data-width="auto">
+                                <option value="">全部</option>
+                                <option value="1">联社营业部1</option>
+                                <option value="2" selected>联社营业部2</option>
+                                <option value="3">联社营业部3</option>
+                                <option value="4">联社营业部4</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="j_custom_code" class="control-label x85">客户号：</label>
+                            <input type="text" name="custom.code" id="j_custom_code" value="120113196309052434" class="form-control validate[required, custom[integer]] required" size="30">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li><button type="submit" class="btn btn-default btn-sm">保存</button></li>
+                <li><button type="button" class="btn btn-close btn-sm">关闭</button></li>
+            </ul>
+        </div>
+    </form>
+</div>

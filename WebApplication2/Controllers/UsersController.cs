@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using WebApplication2.Models;
 
+
 namespace WebApplication2.Controllers
 {
     public class UsersController : ApiController
@@ -22,7 +23,6 @@ namespace WebApplication2.Controllers
         };
 
         // GET api/Users
-        //[CrossSite]
         public IEnumerable<Users> Get()
         {
             return _userList;
@@ -71,6 +71,19 @@ namespace WebApplication2.Controllers
             //uc.DelUsers(3);
 
             //uc.UpdateUsers(4);
+            if (System.Web.HttpContext.Current.Session["aaa"] != null)
+            {
+                var bbb = System.Web.HttpContext.Current.Session["aaa"].ToString();
+            }
+            System.Web.HttpContext.Current.Session["aaa"] = "123";
+
+            var cacheValue = System.Web.HttpRuntime.Cache["aaa"];
+
+            //System.Xml.Schema.Token token = (System.Xml.Schema..Token)HttpRuntime.Cache.Get(id.ToString());
+
+            System.Web.HttpRuntime.Cache.Remove("aaa");
+
+            System.Web.HttpRuntime.Cache.Insert("aaa", "123");
 
             return uc.GetUsersByPagnation(2, 5);  //uc.GetAll();
         }

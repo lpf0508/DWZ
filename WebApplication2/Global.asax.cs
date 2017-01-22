@@ -19,5 +19,19 @@ namespace WebApplication2
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        public override void Init()
+        {
+            PostAuthenticateRequest += WebApiApplication_PostAuthenticateRequest;
+            base.Init();
+        }
+
+        void WebApiApplication_PostAuthenticateRequest(object sender, EventArgs e)
+        {
+            HttpContext.Current.SetSessionStateBehavior(System.Web.SessionState.SessionStateBehavior.Required);
+        }
+
+
+
     }
 }

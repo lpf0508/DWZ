@@ -1,0 +1,119 @@
+<div class="pageHeader">
+    <form id="pagerForm" onsubmit="return dialogSearch(this);" action="table-edit-lookup.html" method="post">
+        <input type="hidden" name="pageNum" value="1" />
+        <input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+        <input type="hidden" name="orderField" value="${param.orderField}" />
+        <div class="searchBar">
+            <ul class="searchContent">
+                <li><label>名称：</label><input type="text" value="" name="code" class="form-control" size="10" /></li>
+                <li><button type="submit" class="btn btn-default btn-sm">查询</button></li>
+                <li><a class="btn btn-orange btn-sm" href="javascript:$.pdialog.refresh();">清空查询</a></li>
+                <li class="pull-right">
+                    <button type="button" class="btn btn-default btn-sm" multlookup="ids" warn="请至少选择一项职业">选择选中</button>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
+<div class="pageContent">
+    <table class="j-table" width="100%" layoutH="95">
+        <thead>
+            <tr>
+                <th orderField="id">No.</th>
+                <th orderField="name">名称</th>
+                <th orderField="note">描述</th>
+                <th class="orderby asc" orderField="date">创建日期</th>
+                <th width="28"><input type="checkbox" class="checkboxCtrl j-icheck" group="ids"></th>
+                <th width="74">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>自由职业</td>
+                <td>Free Man</td>
+                <td>2010-01-01</td>
+                <td><input type="checkbox" name="ids" class="j-icheck" value="{pid:'1', profession:'自由职业'}"></td>
+                <td>
+                    <a href="javascript:$.bringBack({pid:'1', profession:'自由职业'});" class="btn btn-default btn-sm" title="选择本项">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>工程师</td>
+                <td>干大事的</td>
+                <td>2010-01-02</td>
+                <td><input type="checkbox" name="ids" class="j-icheck" value="{pid:'2', profession:'工程师'}"></td>
+                <td>
+                    <a href="javascript:$.bringBack({pid:'2', profession:'工程师'});" class="btn btn-default btn-sm" title="选择本项">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>教师</td>
+                <td>传道授业解惑</td>
+                <td>2010-01-03</td>
+                <td><input type="checkbox" name="ids" class="j-icheck" value="{pid:'3', profession:'教师'}"></td>
+                <td>
+                    <a href="javascript:$.bringBack({pid:'3', profession:'教师'});" class="btn btn-default btn-sm" title="选择本项">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>医生</td>
+                <td>救死扶伤</td>
+                <td>2010-01-04</td>
+                <td><input type="checkbox" name="ids" class="j-icheck" value="{pid:'4', profession:'医生'}"></td>
+                <td>
+                    <a href="javascript:$.bringBack({pid:'4', profession:'医生'});" class="btn btn-default btn-sm" title="选择本项">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>程序猿</td>
+                <td>码农</td>
+                <td>2010-01-05</td>
+                <td><input type="checkbox" name="ids" class="j-icheck" value="{pid:'5', profession:'程序猿'}"></td>
+                <td>
+                    <a href="javascript:$.bringBack({pid:'5', profession:'程序猿'});" class="btn btn-default btn-sm" title="选择本项">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>当官的</td>
+                <td>吃人不吐骨头</td>
+                <td>2010-01-06</td>
+                <td><input type="checkbox" name="ids" class="j-icheck" value="{pid:'6', profession:'当官的'}"></td>
+                <td>
+                    <a href="javascript:$.bringBack({pid:'6', profession:'当官的'});" class="btn btn-default btn-sm" title="选择本项">选择</a>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>路人甲</td>
+                <td>打酱油路过</td>
+                <td>2010-01-07</td>
+                <td><input type="checkbox" name="ids" class="j-icheck" value="{pid:'7', profession:'路人甲'}"></td>
+                <td>
+                    <a href="javascript:$.bringBack({pid:'7', profession:'路人甲'});" class="btn btn-default btn-sm" title="选择本项">选择</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="panelBar">
+        <div class="pages">
+            <span>每页&nbsp;</span>
+            <span class="sel">
+                <select style="display: none;" class="selectpicker show-tick dropup" data-style="btn-default btn-sel xs" data-width="auto" name="numPerPage" onchange="dialogPageBreak({numPerPage:this.value})">
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+                    <option value="120">120</option>
+                    <option value="150">150</option>
+                </select>
+            </span>
+            <span>&nbsp;条，共 7 条</span>
+        </div>
+        <div class="pagination-box" targettype="dialog" totalcount="7" numperpage="30" pagenumshown="10" currentpage="1">
+        </div>
+    </div>
+</div>

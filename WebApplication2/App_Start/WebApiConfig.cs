@@ -12,9 +12,8 @@ namespace WebApplication2
         public static void Register(HttpConfiguration config)
         {
             // Web API 配置和服务
-            //config.SetCorsPolicyProviderFactory(new CorsPolicyFactory());
 
-            string origins = "*";
+            string origins = "http://localhost:8082";//这里配置可供外面访问的IP和端口
             string headers = "*";
             string methods = "*";
             config.EnableCors(new EnableCorsAttribute(origins, headers, methods));
